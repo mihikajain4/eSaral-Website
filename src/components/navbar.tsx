@@ -117,7 +117,7 @@ export default function Navbar() {
                     ].map((item) => (
                         <li key={item}>
                             <Link
-                                href="#"
+                                href="/"
                                 onClick={handleNav}
                                 className="block w-full py-1 transition-colors hover:text-blue-500"
                             >
@@ -130,7 +130,7 @@ export default function Navbar() {
                 {/* sign‑up button */}
                 <div className="mt-6 px-6 pb-6">
                     <Link
-                        href="#"
+                        href="/"
                         onClick={handleNav}
                         className="block w-full rounded-md border-2 border-indigo-900 px-4 py-3 text-center text-sm font-medium text-indigo-900 transition hover:bg-indigo-900 hover:text-white"
                     >
