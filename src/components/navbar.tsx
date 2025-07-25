@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FiMenu, FiX, FiSearch } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
                         {open ? <FiX /> : <FiMenu />}
                     </button>
                     {/* logo */}
-                    <a href="/" className="flex items-center md:mr-8">
+                    <Link href="/" className="flex items-center md:mr-8">
                         <Image
                             src="/logo.png"
                             alt="eSaral logo"
@@ -30,7 +31,7 @@ export default function Navbar() {
                             priority
                             className="h-9 w-auto"
                         />
-                    </a>
+                    </Link>
 
                     {/* search box(for desktop) */}
                     <div className="relative hidden sm:block">
@@ -42,12 +43,12 @@ export default function Navbar() {
                         <FiSearch className="absolute right-3 top-1/2 -translate-y-1/2 text-lg text-gray-500 peer-focus:text-blue-500" />
                     </div>
 
-                    <a
-                        href="#"
+                    <Link
+                        href="/"
                         className=" justify-evenly rounded-md bg-blue-800 px-4 py-2 text-sm font-medium text-white shadow transition hover:opacity-90 md:hidden"
                     >
                         Login
-                    </a>
+                    </Link>
                 </div>
 
 
@@ -63,9 +64,9 @@ export default function Navbar() {
                             "About Us",
                         ].map((item) => (
                             <li key={item} className="relative cursor-pointer group">
-                                <a href="#" className="transition-colors hover:text-blue-500">
+                                <Link href="/" className="transition-colors hover:text-blue-500">
                                     {item}
-                                </a>
+                                </Link>
                                 <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-500 transition-all group-hover:w-full" />
                             </li>
                         ))}
@@ -73,18 +74,18 @@ export default function Navbar() {
 
                     {/* right: auth buttons */}
                     <div className="flex shrink-0 gap-3">
-                        <a
-                            href="#"
+                        <Link
+                            href="/"
                             className="rounded-md bg-blue-800 px-4 py-2 text-sm font-medium text-white shadow transition hover:opacity-90"
                         >
                             Login
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            href="/"
                             className="hidden rounded-md border-2 border-indigo-900 px-4 py-2 text-sm font-medium text-indigo-900 transition hover:bg-indigo-900 hover:text-white md:block"
                         >
                             Sign up for Free
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -115,26 +116,26 @@ export default function Navbar() {
                         "About Us",
                     ].map((item) => (
                         <li key={item}>
-                            <a
+                            <Link
                                 href="#"
                                 onClick={handleNav}
                                 className="block w-full py-1 transition-colors hover:text-blue-500"
                             >
                                 {item}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
 
                 {/* sign‑up button */}
                 <div className="mt-6 px-6 pb-6">
-                    <a
+                    <Link
                         href="#"
                         onClick={handleNav}
                         className="block w-full rounded-md border-2 border-indigo-900 px-4 py-3 text-center text-sm font-medium text-indigo-900 transition hover:bg-indigo-900 hover:text-white"
                     >
                         Sign up for Free
-                    </a>
+                    </Link>
                 </div>
             </nav>
 
