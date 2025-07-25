@@ -8,24 +8,20 @@ const facultyData = [
     name: "NK Gupta Sir",
     subtitle: "IIT KANPUR Alumnus\nEx-VP & Academic Head, Allen Kota",
     image: "/faculty1.png",
-    bg: "bg-[#0385FE]",
-    icons: ["➕", "➖", "✖️"],
+    bg: "bg-[#0184df]",
   },
   {
     name: "NK Gupta Sir",
     subtitle: "IIT KANPUR Alumnus\nEx-VP & Academic Head, Allen Kota",
     image: "/faculty2.png",
-    bg: "bg-[#FFB300]",
-    icons: ["🧲", "⚡"],
+    bg: "bg-[#ffb124]",
   },
   {
     name: "NK Gupta Sir",
     subtitle: "IIT KANPUR Alumnus\nEx-VP & Academic Head, Allen Kota",
     image: "/faculty3.png",
-    bg: "bg-[#864EFF]",
-    icons: ["🧪"],
+    bg: "bg-[#6d51f8]",
   },
-  
 ];
 
 export default function FacultySection() {
@@ -42,39 +38,38 @@ export default function FacultySection() {
       </div>
 
       {/* Scrollable Centered Cards */}
-      <div className="overflow-x-auto">
-        <div className="flex justify-center">
-          <div className="flex gap-6 w-max mx-auto px-2">
-            {facultyData.map((faculty, index) => (
-              <div
-                key={index}
-                className={`min-w-[280px] max-w-[300px] sm:min-w-[300px] rounded-2xl shadow-lg ${faculty.bg} text-white overflow-hidden`}
-              >
-                <div className="p-6 pb-0 relative h-52">
-                  <div className="absolute right-4 top-4 text-3xl">{faculty.icons.join(" ")}</div>
-                  <Image
-                    src={faculty.image}
-                    alt={faculty.name}
-                    width={300}
-                    height={200}
-                    className="object-contain h-full w-auto mx-auto"
-                  />
-                </div>
-                <div className="bg-white text-black p-4">
-                  <h3 className="text-lg font-semibold">{faculty.name}</h3>
-                  <p className="text-sm text-gray-600 whitespace-pre-line">{faculty.subtitle}</p>
-                  <div className="flex items-center justify-between mt-4 text-sm">
-                    <span className="bg-gray-100 px-3 py-1 rounded-md font-medium">
-                      37+ years of Experience
-                    </span>
-                    <span className="bg-gray-100 px-3 py-1 rounded-md font-medium">
-                      10Lakh+ Students
-                    </span>
-                  </div>
+      <div className="overflow-x-auto pl-4 pr-4 sm:px-0">
+        <div className="flex gap-6 w-max">
+          {facultyData.map((faculty, index) => (
+            <div
+              key={index}
+              className={`min-w-[280px] max-w-[300px] sm:min-w-[300px] rounded-2xl shadow-lg ${faculty.bg} text-white overflow-hidden`}
+            >
+              <div className="p-6 pb-0 relative h-52">
+                <Image
+                  src={faculty.image}
+                  alt={faculty.name}
+                  width={300}
+                  height={200}
+                  className="object-contain h-full w-auto mx-auto"
+                />
+              </div>
+              <div className="bg-white text-black p-4">
+                <h3 className="text-lg font-semibold">{faculty.name}</h3>
+                <p className="text-sm text-gray-600 whitespace-pre-line">
+                  {faculty.subtitle}
+                </p>
+                <div className="flex items-center justify-between mt-4 text-sm">
+                  <span className="bg-gray-100 px-3 py-1 rounded-md font-medium">
+                    37+ years of Experience
+                  </span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-md font-medium">
+                    10Lakh+ Students
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
