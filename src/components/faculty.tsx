@@ -22,6 +22,7 @@ const facultyData = [
     image: "/faculty3.png",
     bg: "bg-[#6d51f8]",
   },
+  
 ];
 
 export default function FacultySection() {
@@ -33,25 +34,26 @@ export default function FacultySection() {
           Learn from <span className="text-blue-800">Top IITians & Doctors Faculty</span>
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-base sm:text-lg">
-          Our team of passionate educators includes alumni from IITs and top medical colleges — bringing real expertise to your prep for JEE, NEET & Boards.
+          Our team of passionate educators includes alumni from IITs and top medical colleges —
+          bringing real expertise to your prep for JEE, NEET & Boards.
         </p>
       </div>
 
       {/* Scrollable Centered Cards */}
-      <div className="overflow-x-auto pl-4 pr-4 sm:px-0">
-        <div className="flex gap-6 w-max">
+      <div className="overflow-x-auto">
+        <div className="flex justify-center gap-6 w-max mx-auto px-4">
           {facultyData.map((faculty, index) => (
             <div
               key={index}
               className={`min-w-[280px] max-w-[300px] sm:min-w-[300px] rounded-2xl shadow-lg ${faculty.bg} text-white overflow-hidden`}
             >
-              <div className="p-6 pb-0 relative h-52">
+              <div className="p-6 pb-0 relative h-64">
                 <Image
                   src={faculty.image}
                   alt={faculty.name}
                   width={300}
-                  height={200}
-                  className="object-contain h-full w-auto mx-auto"
+                  height={300}
+                  className="object-contain h-full w-full mx-auto"
                 />
               </div>
               <div className="bg-white text-black p-4">
